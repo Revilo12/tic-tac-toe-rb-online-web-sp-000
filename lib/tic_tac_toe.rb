@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+# Helper Method
+def position_taken?(board, index)
+  !(board[index].nil? || board[index] == " ")
+end
+
+>>>>>>> 23e458bdb2b7a06b40d17986bf9e847a115e4b2b
 # Define your WIN_COMBINATIONS constant
 WIN_COMBINATIONS = [
   [0,1,2],
@@ -85,10 +93,13 @@ def turn_count(board)
   turn
 end
 
+<<<<<<< HEAD
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
 
+=======
+>>>>>>> 23e458bdb2b7a06b40d17986bf9e847a115e4b2b
 #Returns the cahracer of the current player
 def current_player(board)
   turn  = turn_count(board)
@@ -112,8 +123,13 @@ def input_to_index(user_input)
   user_input.to_i - 1
 end
 
+<<<<<<< HEAD
 def move(board, index, current_player)
   board[index] = current_player
+=======
+def move(board, index)
+  board[index] = current_player(board)
+>>>>>>> 23e458bdb2b7a06b40d17986bf9e847a115e4b2b
 end
 
 def valid_move?(board, index)
@@ -125,7 +141,11 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board, index)
+<<<<<<< HEAD
     move(board, index, current_player(board))
+=======
+    move(board, index)
+>>>>>>> 23e458bdb2b7a06b40d17986bf9e847a115e4b2b
     display_board(board)
   else
     turn(board)
@@ -138,8 +158,14 @@ def play(board)
     turn(board)
   end
   if winner(board)
+<<<<<<< HEAD
     puts "Congratulations #{winner(board)}!"
   elsif
     puts "Cat's Game!"
+=======
+    puts "Congratulations #{winner(board)!}"
+  elsif
+    puts "Sorry guys, it was a draw"
+>>>>>>> 23e458bdb2b7a06b40d17986bf9e847a115e4b2b
   end
 end
